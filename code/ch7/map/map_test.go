@@ -19,6 +19,7 @@ func TestAccessNotExistingKey(t *testing.T) {
 	m1[2] = 0
 	t.Log(m1[2])
 	m1[3] = 0
+	// 对于map，若判断指定的key是否存在对应的value，第二个参数返回的是是否存在，可以通过如下方式进行判断
 	if v, ok := m1[3]; ok {
 		t.Logf("Key 3's value is %d", v)
 	} else {
